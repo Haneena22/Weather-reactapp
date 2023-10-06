@@ -4,7 +4,7 @@ import axios from "axios";
 
 const Home = () => {
   const [data, setData] = useState({
-    celcius: "9",
+    celsius: "9",
     name: "London",
     humidity: "70",
     speed: "54",
@@ -35,7 +35,7 @@ const Home = () => {
         console.log(res.data);
         setData({
           ...data,
-          celcius: res.data.main.temp,
+          celsius: res.data.main.temp,
           name: res.data.name,
           humidity: res.data.main.humidity,
           speed: res.data.wind.speed,
@@ -64,7 +64,7 @@ const Home = () => {
         </div>
         <div className="winfo">
           <img src={data.imag} alt="" className="icon" />
-          <h1>{Math.round(data.celcius)}ْc</h1>
+          <h1>{Math.round(data.celsius)}ْc</h1>
           <h2>{data.name}</h2>
 
           <div className="details">
